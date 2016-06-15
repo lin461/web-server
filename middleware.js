@@ -1,4 +1,5 @@
 // create a middleware object
+// use module.exports to expose middleware
 module.exports = {
 	requireAuthentication: function(req,res,next){
 		console.log('private route hit!');
