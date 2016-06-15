@@ -27,7 +27,7 @@ app.use(middleware.logger);
 // /about
 // add route-level middleware before function(req,res)
 app.get('/about', middleware.requireAuthentication, function(req, res){
-	res.send('About Us');
+	res.send('About Us!');
 });
 
 app.use(express.static(__dirname + '/public'));
