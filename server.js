@@ -2,17 +2,8 @@ var express = require('express');
 var app = express();
 var PORT = 3000;
 
-// create a middleware object
-var middleware ={
-	requireAuthentication: function(req,res,next){
-		console.log('private route hit!');
-		next();
-	},
-	logger: function (req, res, next){
-		console.log('Request: ' + new Date().toString() + ' ' + req.method + ' ' + req.originalUrl);
-		next();
-	}
-};
+var middleware = require('./middleware.js');
+
  
 // global-level middleware
 // the order is important, this method should be before the '/about' route
